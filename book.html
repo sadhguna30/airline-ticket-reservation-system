@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Flight</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+    <h2>Book Flight: {{ flight.flight_no }}</h2>
+    <form action="/confirm_booking/{{ flight._id }}" method="POST">
+        <label for="economy_tickets">Economy Tickets:</label>
+        <input type="number" id="economy_tickets" name="economy_tickets" value="0" min="0">
+        <label for="business_tickets">Business Tickets:</label>
+        <input type="number" id="business_tickets" name="business_tickets" value="0" min="0">
+        <button type="submit">Confirm Booking</button>
+    </form>
+</div>
+</body>
+</html>
+
+

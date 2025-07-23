@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment Details</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+    <h2>Payment Details</h2>
+    <p>Flight: {{ flight.flight_no }}</p>
+    <p>Passenger: {{ booking.username }}</p>
+    <p>Total Amount: ${{ total_amount }}</p>
+    <form action="/confirm_payment/{{ booking._id }}">
+        <button type="submit">Pay Now</button>
+    </form>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Flight</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+    <h2>Edit Flight</h2>
+    <form method="POST">
+        <input type="text" name="flight_no" placeholder="Flight No" value="{{ flight.flight_no }}" required>
+        <input type="text" name="origin" placeholder="Origin" value="{{ flight.origin }}" required>
+        <input type="text" name="destination" placeholder="Destination" value="{{ flight.destination }}" required>
+        <input type="date" name="date" value="{{ flight.date }}" required>
+        <input type="number" name="economy_seats" placeholder="Economy Seats" value="{{ flight.economy_seats }}" required>
+        <input type="number" name="business_seats" placeholder="Business Seats" value="{{ flight.business_seats }}" required>
+        <input type="number" step="0.01" name="economy_cost" placeholder="Economy Cost" value="{{ flight.economy_cost }}" required>
+        <input type="number" step="0.01" name="business_cost" placeholder="Business Cost" value="{{ flight.business_cost }}" required>
+        <button type="submit">Update Flight</button>
+    </form>
+</div>
+</body>
+</html>
+

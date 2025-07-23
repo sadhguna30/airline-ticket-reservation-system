@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Available Flights</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+    <h2>Available Flights</h2>
+    <ul>
+    {% for flight in flights %}
+        <li>{{ flight.flight_no }} - {{ flight.origin }} to {{ flight.destination }} on {{ flight.date }}
+            (Economy: {{ flight.economy_seats }} seats, Cost: ${{ flight.economy_cost }})
+            (Business: {{ flight.business_seats }} seats, Cost: ${{ flight.business_cost }})
+        <a href="/book/{{ flight._id }}"><button>Book</button></a></li>
+    {% endfor %}
+    </ul>
+</div>
+</body>
+</html>
+
+

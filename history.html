@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking History</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+    <h2>Your Bookings</h2>
+    <ul>
+    {% for booking in bookings %}
+        <li>{{ booking.username }} - {{ booking.flight.flight_no }} from {{ booking.flight.origin }} to {{ booking.flight.destination }} on {{ booking.flight.date }}
+            (Economy: {{ booking.economy_tickets }} tickets, Business: {{ booking.business_tickets }} tickets) -
+            Total Cost: ${{ booking.total_cost }}
+        <a href="/payment/{{ booking._id }}"><button>Pay Now</button></a>
+        <a href="/cancel/{{ booking._id }}"><button>Cancel</button></a></li>
+    {% endfor %}
+    </ul>
+    <a href="/dashboard"><button>Back to Dashboard</button></a>
+</div>
+</body>
+</html>
+

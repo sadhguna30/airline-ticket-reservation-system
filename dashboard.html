@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+    <h2>User Dashboard</h2>
+    <p>Welcome, {{ session['username'] }}!</p>
+    <form action="/search" method="get">
+        <input type="text" name="origin" placeholder="From" required>
+        <input type="text" name="destination" placeholder="To" required>
+        <input type="date" name="date" required>
+        <button type="submit">Search Flights</button>
+    </form><br>
+    <a href="/history"><button>Booking History</button></a>
+    <a href="/logout"><button>Logout</button></a>
+</div>
+</body>
+</html>
+

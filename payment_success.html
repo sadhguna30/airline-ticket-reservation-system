@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment Successful</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+    <h2>Payment Successful! 🎉</h2>
+    <p>Payment of ${{ booking.total_cost }} has been processed successfully.</p>
+    <a href="/ticket/{{ booking._id }}"><button>Get Ticket</button></a>
+    <a href="/history"><button>View Bookings</button></a>
+</div>
+</body>
+</html>
